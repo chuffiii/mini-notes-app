@@ -1,5 +1,4 @@
 import { AddNotes } from "@/components/AddNotes";
-import { DeleteNodes } from "@/components/DeleteNotes";
 import { Notes } from "@/components/Notes";
 
 
