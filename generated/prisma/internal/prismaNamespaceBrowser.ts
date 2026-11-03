@@ -49,7 +49,7 @@ export const AnyNull = runtime.objectEnumValues.instances.AnyNull
 
 
 export const ModelName = {
-  Bookmark: 'Bookmark'
+  Notes: 'Notes'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -68,14 +68,14 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-export const BookmarkScalarFieldEnum = {
+export const NotesScalarFieldEnum = {
   id: 'id',
   title: 'title',
-  url: 'url',
+  content: 'content',
   createdAt: 'createdAt'
 } as const
 
-export type BookmarkScalarFieldEnum = (typeof BookmarkScalarFieldEnum)[keyof typeof BookmarkScalarFieldEnum]
+export type NotesScalarFieldEnum = (typeof NotesScalarFieldEnum)[keyof typeof NotesScalarFieldEnum]
 
 
 export const SortOrder = {

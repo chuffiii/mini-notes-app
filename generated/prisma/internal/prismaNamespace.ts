@@ -390,7 +390,7 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 
 
 export const ModelName = {
-  Bookmark: 'Bookmark'
+  Notes: 'Notes'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -406,81 +406,81 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "bookmark"
+    modelProps: "notes"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
-    Bookmark: {
-      payload: Prisma.$BookmarkPayload<ExtArgs>
-      fields: Prisma.BookmarkFieldRefs
+    Notes: {
+      payload: Prisma.$NotesPayload<ExtArgs>
+      fields: Prisma.NotesFieldRefs
       operations: {
         findUnique: {
-          args: Prisma.BookmarkFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload> | null
+          args: Prisma.NotesFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload> | null
         }
         findUniqueOrThrow: {
-          args: Prisma.BookmarkFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>
+          args: Prisma.NotesFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>
         }
         findFirst: {
-          args: Prisma.BookmarkFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload> | null
+          args: Prisma.NotesFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload> | null
         }
         findFirstOrThrow: {
-          args: Prisma.BookmarkFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>
+          args: Prisma.NotesFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>
         }
         findMany: {
-          args: Prisma.BookmarkFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
+          args: Prisma.NotesFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>[]
         }
         create: {
-          args: Prisma.BookmarkCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>
+          args: Prisma.NotesCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>
         }
         createMany: {
-          args: Prisma.BookmarkCreateManyArgs<ExtArgs>
+          args: Prisma.NotesCreateManyArgs<ExtArgs>
           result: BatchPayload
         }
         createManyAndReturn: {
-          args: Prisma.BookmarkCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
+          args: Prisma.NotesCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>[]
         }
         delete: {
-          args: Prisma.BookmarkDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>
+          args: Prisma.NotesDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>
         }
         update: {
-          args: Prisma.BookmarkUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>
+          args: Prisma.NotesUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>
         }
         deleteMany: {
-          args: Prisma.BookmarkDeleteManyArgs<ExtArgs>
+          args: Prisma.NotesDeleteManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateMany: {
-          args: Prisma.BookmarkUpdateManyArgs<ExtArgs>
+          args: Prisma.NotesUpdateManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateManyAndReturn: {
-          args: Prisma.BookmarkUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
+          args: Prisma.NotesUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>[]
         }
         upsert: {
-          args: Prisma.BookmarkUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$BookmarkPayload>
+          args: Prisma.NotesUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NotesPayload>
         }
         aggregate: {
-          args: Prisma.BookmarkAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateBookmark>
+          args: Prisma.NotesAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateNotes>
         }
         groupBy: {
-          args: Prisma.BookmarkGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.BookmarkGroupByOutputType>[]
+          args: Prisma.NotesGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.NotesGroupByOutputType>[]
         }
         count: {
-          args: Prisma.BookmarkCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.BookmarkCountAggregateOutputType> | number
+          args: Prisma.NotesCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.NotesCountAggregateOutputType> | number
         }
       }
     }
@@ -523,14 +523,14 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-export const BookmarkScalarFieldEnum = {
+export const NotesScalarFieldEnum = {
   id: 'id',
   title: 'title',
-  url: 'url',
+  content: 'content',
   createdAt: 'createdAt'
 } as const
 
-export type BookmarkScalarFieldEnum = (typeof BookmarkScalarFieldEnum)[keyof typeof BookmarkScalarFieldEnum]
+export type NotesScalarFieldEnum = (typeof NotesScalarFieldEnum)[keyof typeof NotesScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -697,7 +697,7 @@ export interface PrismaClientOptions {
   omit?: GlobalOmitConfig
 }
 export type GlobalOmitConfig = {
-  bookmark?: Prisma.BookmarkOmit
+  notes?: Prisma.NotesOmit
 }
 
 /* Types for Logging */

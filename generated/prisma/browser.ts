@@ -18,7 +18,7 @@ export { Prisma }
 export * as $Enums from './enums'
 export * from './enums';
 /**
- * Model Bookmark
+ * Model Notes
  * 
  */
-export type Bookmark = Prisma.BookmarkModel
+export type Notes = Prisma.NotesModel

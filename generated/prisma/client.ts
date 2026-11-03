@@ -29,8 +29,8 @@ export * from "./enums"
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Bookmarks
- * const bookmarks = await prisma.bookmark.findMany()
+ * // Fetch zero or more Notes
+ * const notes = await prisma.notes.findMany()
  * ```
  * 
  * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client).
@@ -45,7 +45,7 @@ path.join(__dirname, "query_engine-windows.dll.node")
 path.join(process.cwd(), "generated/prisma/query_engine-windows.dll.node")
 
 /**
- * Model Bookmark
+ * Model Notes
  * 
  */
-export type Bookmark = Prisma.BookmarkModel
+export type Notes = Prisma.NotesModel

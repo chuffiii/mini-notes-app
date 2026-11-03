@@ -8,5 +8,5 @@
  *
  * 🟢 You can import this file directly.
  */
-export type * from './models/Bookmark'
+export type * from './models/Notes'
 export type * from './commonInputTypes'
